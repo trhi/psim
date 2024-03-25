@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Enriqueta";
+  src: url("../fonts/Enriqueta-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body
+{
+  background: pink;
+}
+
+#puzzle-canvas-wrapper
+{
+  cursor: pointer;
+  height: 1000px;
+  margin: 0px auto 0 auto;
+  width: 2000px;
+  margin-left: -757px;
+}
+
+#uploadButton{
+  font-family: "Enriqueta";
+  width: 700px;
+  font-size: 24px;
+}
+
+input::file-selector-button {
+  font-family: "Enriqueta";
+  color: black;
+  padding: 0.5em;
+  border: solid 2px black;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+#uploadButtonInfo{
+  font-size: 24px;
+}
+
+p{
+  font-family: "Enriqueta";
+  margin-left: 100px;
+  color: black;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 992px){
+
+  body{
+    overflow-y: hidden;
+  }
+
+  p{
+    margin-left: 20px;
+    font-size: 50px;
+  }
+
+  #uploadButtonInfo{
+    font-size: 60px;
+  }
+
+  #uploadButton{
+    width: 700px;
+    height: 30px;
+    font-size: 50px;
+  }
+
+  input::file-selector-button {
+    font-size: 50px;
+    color: black;
+    padding: 0.5em;
+    border: solid 2px black;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  #puzzle-canvas-wrapper
+  {
+    margin: 70px auto 0 auto;
+    width: 1000px;
+    margin-left: 0px;
+  }
+
+}

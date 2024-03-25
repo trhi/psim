@@ -1,0 +1,53 @@
+<!--
+
+This code is mostly code written by Logan Franken. Franken posted this project
+on their blog/site on July 25th 2011. Quote from Franken's README:
+
+"
+Circle-Puzzle
+=============
+HTML5 rotating concentric circle puzzle created with the HTML5 canvas element
+https://github.com/loganfranken/Circle-Puzzle
+http://www.loganfranken.com/blog/22/html5-circle-puzzle/
+"
+
+The code was adapted to:
+- use p5.js
+- change variable names: puzzle -> volvelle
+- reorganise code
+- allow the user to upload their own image to create a volvelle
+- allow user to set the percentages at which the volvelles are cut at
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>volvelle from image</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/volvelle-image.css">
+	<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+</head>
+<body>
+<div style="max-width: 900px;">
+	<p style="text-align: center">⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳</p>
+	<br><br>
+	<p><em>A poética do imprevisto</em></p>
+	 	<p style="margin-left: 250px">por Pedro Simoões</p>
+	<div style="text-align: center; margin-left: 500px">
+	<img onclick="createRotatingVolvelle(psim1)" style="cursor: pointer; width: 150px; margin-right: 30px; border-radius: 50%" src="assets/img/simoes-words-2-L.png"></img>
+	<img onclick="createRotatingVolvelle(psim2)" style="cursor: pointer; width: 150px; margin-right: 30px; border-radius: 50%" src="assets/img/simoes-words-3-L.png"></img>
+	</div>
+	<p></p><br><br><br>
+<p></p>
+	<p style="text-align: center; margin-left: 700px">⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳⟳</p>
+
+</div>
+<div id="puzzle-canvas-wrapper">
+	</div>
+
+	<script language="javascript" type="text/javascript" src="assets/lib/p5.min.js"></script>
+	<script language="javascript" type="text/javascript" src="assets/script/volvelle-image.js"></script>
+</body>
+</html>
