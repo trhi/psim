@@ -19,27 +19,6 @@ body
   margin-left: -757px;
 }
 
-#uploadButton{
-  font-family: "Enriqueta";
-  width: 700px;
-  font-size: 24px;
-}
-
-input::file-selector-button {
-  font-family: "Enriqueta";
-  color: black;
-  padding: 0.5em;
-  border: solid 2px black;
-  border-radius: 50px;
-  background-color: white;
-  cursor: pointer;
-}
-
-
-#uploadButtonInfo{
-  font-size: 24px;
-}
-
 p{
   font-family: "Enriqueta";
   margin-left: 100px;
@@ -50,6 +29,8 @@ p{
 @media screen and (max-width: 992px){
 
   body{
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   p{
@@ -58,14 +39,15 @@ p{
   }
 
   #infotext{
-    float: right;
+    display: none;
   }
 
-  #puzzle-canvas-wrapper
-  {
+  #puzzle-canvas-wrapper{
     margin: 70px auto 0 auto;
     width: 3000px;
-    margin-left: -757px;
+    margin-left: -1500px;
+    transform: scale(2); /* Adjust the scale factor as needed */
+    transform-origin: top left;
   }
 
 }
