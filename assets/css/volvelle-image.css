@@ -50,7 +50,6 @@ p{
 @media screen and (max-width: 992px){
 
   body{
-    overflow-y: hidden;
   }
 
   p{
@@ -58,30 +57,14 @@ p{
     font-size: 50px;
   }
 
-  #uploadButtonInfo{
-    font-size: 60px;
-  }
-
-  #uploadButton{
-    width: 700px;
-    height: 30px;
-    font-size: 50px;
-  }
-
-  input::file-selector-button {
-    font-size: 50px;
-    color: black;
-    padding: 0.5em;
-    border: solid 2px black;
-    border-radius: 50px;
-    background-color: white;
-    cursor: pointer;
+  #infotext{
+    float: right;
   }
 
   #puzzle-canvas-wrapper
   {
     margin: 70px auto 0 auto;
-    width: 1000px;
+    width: 3000px;
     margin-left: -757px;
   }
 
