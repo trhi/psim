@@ -31,6 +31,7 @@ p{
   body{
     overflow-x: hidden;
     overflow-y: hidden;
+
   }
 
   p{
@@ -45,9 +46,7 @@ p{
   #puzzle-canvas-wrapper{
     margin: 70px auto 0 auto;
     width: 3000px;
-    margin-left: -1500px;
-    transform: scale(2); /* Adjust the scale factor as needed */
-    transform-origin: top left;
+    margin-left: -757px;
   }
 
 }
