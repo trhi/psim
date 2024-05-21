@@ -39,6 +39,13 @@ function draw(){
 
 function createRotatingVolvelle(img){
 
+
+	//console.log(window.innerWidth);
+	if (window.innerWidth < 992){
+		console.log("window inner width is small:", window.innerWidth);
+		img = psim3;
+	}
+
 	console.log("img is:", img);
 	if(img[2] === "img"){
 		canvas.parent(puzzleDivIMG);
