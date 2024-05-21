@@ -26,8 +26,7 @@ body
 #puzzle-canvas-wrapper-img{
   position: absolute;
   margin: -300px auto 0 auto;
-  width: 1000px;
-  margin-left: 0px;
+  width: 800px;
 }
 
 p{

@@ -6,6 +6,7 @@
 let psim1 = [ "assets/img/simoes-words-2-L.png", [1, 0.85, 0.684, 0.53, 0.373], "words" ];
 let psim2 = [ 'assets/img/simoes-words-3-L.png', [1, 0.84, 0.684, 0.53, 0.373], "words" ];
 let psim3 = [ 'assets/img/simoes-img-3.png', [1, 0.62, 0.433], "img" ];
+let psim4 = [ 'assets/img/simoes-img-4.png', [1, 0.62, 0.433], "img" ];
 
 let canvas;
 let userVolvelleArray = [1, 0.75, 0.5, 0.23];
@@ -50,7 +51,7 @@ function createRotatingVolvelle(img){
 	if(img[2] === "img"){
 		canvas.parent(puzzleDivIMG);
 	}else{
-		console.log("going into the puzzleDIV assingment:");
+		//console.log("going into the puzzleDIV assingment:");
 		canvas.parent(puzzleDiv);
 	}
 	let volvellePercentages = img[1];
