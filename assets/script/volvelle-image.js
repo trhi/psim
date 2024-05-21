@@ -3,23 +3,26 @@
 //Franken's code is available here: https://github.com/loganfranken/Circle-Puzzle
 //Franken's code was "translated" into p5.js for questions of accessibility
 
-let psim1 = [ "assets/img/simoes-words-2-L.png", [1, 0.85, 0.684, 0.53, 0.373] ];
-let psim2 = [ 'assets/img/simoes-words-3-L.png', [1, 0.84, 0.684, 0.53, 0.373] ];
+let psim1 = [ "assets/img/simoes-words-2-L.png", [1, 0.85, 0.684, 0.53, 0.373], "words" ];
+let psim2 = [ 'assets/img/simoes-words-3-L.png', [1, 0.84, 0.684, 0.53, 0.373], "words" ];
+let psim3 = [ 'assets/img/simoes-img-3.png', [1, 0.62, 0.433], "img" ];
 
 let canvas;
 let userVolvelleArray = [1, 0.75, 0.5, 0.23];
 let puzzleDiv = document.getElementById("puzzle-canvas-wrapper");
+let puzzleDivIMG = document.getElementById("puzzle-canvas-wrapper-img");
+
 
 //add this in order to make it valid p5.js, but we are not using it in this sketch:
 function setup(){
 
 	canvas = createCanvas(1500,1500);
-	canvas.parent(puzzleDiv);
+	//canvas.parent(puzzleDiv);
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//
 	// 		Launch the Puzzle when the DOM is ready
-	// 		for now, only display barros:
+	// 		for now, display the first of the volvelles:
 	//
 	//
 	window.addEventListener('load', createRotatingVolvelle (psim1), false);
@@ -37,12 +40,17 @@ function draw(){
 function createRotatingVolvelle(img){
 
 	console.log("img is:", img);
+	if(img[2] === "img"){
+		canvas.parent(puzzleDivIMG);
+	}else{
+		console.log("going into the puzzleDIV assingment:");
+		canvas.parent(puzzleDiv);
+	}
 	let volvellePercentages = img[1];
 	let array = img[1];
 	let volvelleImage = new Image();
 	volvelleImage.src = img[0];
 	volvelleImage.onload = function() {
-		//let puzzle = new PUZZLE.PuzzleController(canvas, volvelleImage, array);
 		let theVolvelle = new volvelle(canvas, volvelleImage, volvellePercentages);
 	}
 }
