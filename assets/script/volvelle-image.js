@@ -3,15 +3,17 @@
 //Franken's code is available here: https://github.com/loganfranken/Circle-Puzzle
 //Franken's code was "translated" into p5.js for questions of accessibility
 
-let psim1 = [ "assets/img/simoes-words-2-L.png", [1, 0.85, 0.684, 0.53, 0.373], "words" ];
-let psim2 = [ 'assets/img/simoes-words-3-L.png', [1, 0.84, 0.684, 0.53, 0.373], "words" ];
-let psim3 = [ 'assets/img/simoes-img-3.png', [1, 0.62, 0.433], "img" ];
-let psim4 = [ 'assets/img/simoes-img-4.png', [1, 0.62, 0.433], "img" ];
+let psim1 = [ "assets/img/simoes-words-1.png", [1, 0.85, 0.684, 0.53, 0.373], "words" ];
+let psim2 = [ 'assets/img/simoes-words-2.png', [1, 0.84, 0.684, 0.53, 0.373], "words" ];
+let psim3 = [ 'assets/img/simoes-words-3.png', [1, 0.84, 0.684, 0.53, 0.373], "words-center" ];
+let psim4 = [ 'assets/img/simoes-img-1.png', [1, 0.62, 0.433], "img" ];
+let psim5 = [ 'assets/img/simoes-img-2.png', [1, 0.62, 0.433], "img" ];
 
 let canvas;
 let userVolvelleArray = [1, 0.75, 0.5, 0.23];
 let puzzleDiv = document.getElementById("puzzle-canvas-wrapper");
 let puzzleDivIMG = document.getElementById("puzzle-canvas-wrapper-img");
+let puzzleDivWordsCentered = document.getElementById("puzzle-canvas-wrapper-words-centered");
 
 
 //add this in order to make it valid p5.js, but we are not using it in this sketch:
@@ -42,14 +44,16 @@ function createRotatingVolvelle(img){
 
 
 	//console.log(window.innerWidth);
-	if (window.innerWidth < 992){
+	if (window.innerWidth < 1300){
 		console.log("window inner width is small:", window.innerWidth);
-		img = psim3;
+		img = psim4;
 	}
 
 	console.log("img is:", img);
 	if(img[2] === "img"){
 		canvas.parent(puzzleDivIMG);
+	}else if (img[2] === "words-center"){
+		canvas.parent(puzzleDivWordsCentered);
 	}else{
 		//console.log("going into the puzzleDIV assingment:");
 		canvas.parent(puzzleDiv);
