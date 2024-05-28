@@ -6,11 +6,12 @@
 let psim1 = [ "assets/img/simoes-words-1.png", [1, 0.85, 0.684, 0.53, 0.373], "words" ];
 let psim2 = [ 'assets/img/simoes-words-2.png', [1, 0.84, 0.684, 0.53, 0.373], "words" ];
 
+let psim3 = [ 'assets/img/simoes-words-3.png', [1, 0.84, 0.684, 0.53, 0.373], "words-center" ];
+let psim6 = [ 'assets/img/simoes-words-4.png', [1, 0.87, 0.73, 0.6, 0.45], "words-center" ];
+
 let psim4 = [ 'assets/img/simoes-img-1.png', [1, 0.62, 0.433], "img" ];
 let psim5 = [ 'assets/img/simoes-img-2.png', [1, 0.62, 0.433], "img" ];
 
-let psim3 = [ 'assets/img/simoes-words-3.png', [1, 0.84, 0.684, 0.53, 0.373], "words-center" ];
-let psim6 = [ 'assets/img/simoes-words-4.png', [1, 0.87, 0.73, 0.6, 0.45], "words-center" ];
 
 let canvas;
 let userVolvelleArray = [1, 0.75, 0.5, 0.23];
@@ -47,18 +48,25 @@ function createRotatingVolvelle(img){
 
 
 	//console.log(window.innerWidth);
-	if (window.innerWidth < 1300){
+	if (window.innerWidth < 800){
 		console.log("window inner width is small:", window.innerWidth);
 		img = psim4;
 	}
 
 	console.log("img is:", img);
+
 	if(img[2] === "img"){
+		puzzleDivWordsCentered.style.display = "inline";
+		puzzleDiv.style.display = "none";
 		canvas.parent(puzzleDivWordsCentered);
 		//canvas.parent(puzzleDivIMG);
 	}else if (img[2] === "words-center"){
+		puzzleDivWordsCentered.style.display = "inline";
+		puzzleDiv.style.display = "none";
 		canvas.parent(puzzleDivWordsCentered);
 	}else{
+		puzzleDivWordsCentered.style.display = "none";
+		puzzleDiv.style.display = "inline";
 		//console.log("going into the puzzleDIV assingment:");
 		canvas.parent(puzzleDiv);
 	}

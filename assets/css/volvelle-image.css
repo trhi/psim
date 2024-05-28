@@ -7,7 +7,7 @@
 
 body
 {
-  background: pink;
+  background: #ece7d9;
 }
 
 #volvelle-canvas{
@@ -21,6 +21,7 @@ body
   margin: 0px auto 0 auto;
   width: 2000px;
   margin-left: -757px;
+  z-index: 1000;
 }
 
 #puzzle-canvas-wrapper-img{
