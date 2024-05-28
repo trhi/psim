@@ -27,17 +27,17 @@ body
 #puzzle-canvas-wrapper-img{
   position: absolute;
   cursor: pointer;
-  height: 1000px;
-  margin: 0 auto 0 auto;
+  height: 800px;
+  margin: -300px auto 0 auto;
   width: 800px;
 }
 
 #puzzle-canvas-wrapper-words-centered{
   position: absolute;
   cursor: pointer;
-  height: 1000px;
-  margin: 0px auto 0 auto;
-  width: 2000px;
+  height: 1500px;
+  margin: 0 auto 0 auto;
+  width: 1500px;
 }
 
 p{

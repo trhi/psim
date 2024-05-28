@@ -56,16 +56,19 @@ function createRotatingVolvelle(img){
 	console.log("img is:", img);
 
 	if(img[2] === "img"){
-		puzzleDivWordsCentered.style.display = "inline";
+		puzzleDivIMG.style.display = "inline";
 		puzzleDiv.style.display = "none";
-		canvas.parent(puzzleDivWordsCentered);
+		puzzleDivWordsCentered.style.display = "none";
+		canvas.parent(puzzleDivIMG);
 		//canvas.parent(puzzleDivIMG);
 	}else if (img[2] === "words-center"){
 		puzzleDivWordsCentered.style.display = "inline";
+		puzzleDivIMG.style.display = "none";
 		puzzleDiv.style.display = "none";
 		canvas.parent(puzzleDivWordsCentered);
 	}else{
 		puzzleDivWordsCentered.style.display = "none";
+		puzzleDivIMG.style.display = "none";
 		puzzleDiv.style.display = "inline";
 		//console.log("going into the puzzleDIV assingment:");
 		canvas.parent(puzzleDiv);
