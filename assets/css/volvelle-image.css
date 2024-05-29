@@ -11,15 +11,13 @@ body
 }
 
 #volvelle-canvas{
-  position: relative;
+  position: relative; 
+  height: 1500px;
 }
 
 #puzzle-canvas-wrapper{
   position: absolute;
   cursor: pointer;
-  height: 1000px;
-  margin: 0px auto 0 auto;
-  width: 2000px;
   margin-left: -757px;
   z-index: 1000;
 }
@@ -27,17 +25,15 @@ body
 #puzzle-canvas-wrapper-img{
   position: absolute;
   cursor: pointer;
-  height: 800px;
-  margin: -300px auto 0 auto;
-  width: 800px;
+  margin-left: -150px;
+  margin-top: -250px;
 }
 
 #puzzle-canvas-wrapper-words-centered{
   position: absolute;
   cursor: pointer;
-  height: 1500px;
-  margin: 0 auto 0 auto;
-  width: 1500px;
+  margin-left: -50px;
+  margin-top: -150px;
 }
 
 p{
